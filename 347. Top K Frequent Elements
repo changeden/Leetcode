@@ -1,0 +1,10 @@
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        cnt = Counter(nums)   # O(N)  / cnt is a distionary
+        return [ key for key,_ in cnt.most_common(k)]  # [ expression for key, value in range() if condition]
+        # sort logk , O(Nlogk)
